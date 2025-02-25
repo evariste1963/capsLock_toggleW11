@@ -10,7 +10,8 @@ global capsLockDisabled := false
     if capsLockDisabled  ; If Caps Lock is currently disabled
     {
         EnableCapsLock()  ; Enable the Caps Lock key
-		ToolTip("Caps Lock is ENABLED", , , 1)
+        ;ToolTip("Caps Lock is ENABLED - careful what you wish for!", , , 1)
+		MsgBox("Caps Lock is ENABLED - careful what you wish for!", "Caps Lock Key","T2")
     }
     else  ; If Caps Lock is not disabled
     {
@@ -20,9 +21,10 @@ global capsLockDisabled := false
             SetCapsLockState(false)  ; Force Caps Lock OFF and update the light
         }
         DisableCapsLock()  ; Disable the Caps Lock key
-		ToolTip("Caps Lock is DISABLED", , , 1)
+        ;ToolTip("Caps Lock is DISABLED - you can now type like a madman!", , , 1)
+		MsgBox("Caps Lock is Disabled - you can now type like a madman!", "Caps Lock Key","T2")
     }
-	 SetTimer(RemoveToolTip, -1500)
+    ;SetTimer(RemoveToolTip, -2000)
 }
 
 ; Function to disable the Caps Lock key
@@ -32,7 +34,7 @@ DisableCapsLock()
     ; Remap Caps Lock to do nothing
     Hotkey("CapsLock", (*) => "", "On")
     capsLockDisabled := true
-	
+
 }
 
 ; Function to enable the Caps Lock key
@@ -42,8 +44,8 @@ EnableCapsLock()
     ; Restore the Caps Lock key to its default behavior
     Hotkey("CapsLock", "Off")
     capsLockDisabled := false
-	
+
 }
-RemoveToolTip() {
-    ToolTip()
-}
+;RemoveToolTip() {
+  ;  ToolTip()
+;}
