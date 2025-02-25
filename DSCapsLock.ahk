@@ -11,18 +11,18 @@ global capsLockDisabled := false
     {
         EnableCapsLock()  ; Enable the Caps Lock key
         ;ToolTip("Caps Lock is ENABLED - careful what you wish for!", , , 1)
-		MsgBox("Caps Lock is ENABLED - careful what you wish for!", "Caps Lock Key","T2")
+        MsgBox("Caps Lock is ENABLED - careful what you wish for!", "Caps Lock Key", "T2")
     }
     else  ; If Caps Lock is not disabled
     {
-        ; If Caps Lock is ON, turn it OFF before disabling
-        if CapsLockToggleState
-        {
-            SetCapsLockState(false)  ; Force Caps Lock OFF and update the light
-        }
+        ; If Caps Lock is ON, turn it OFF before disabling --> don't really need to check this, just set it tyo false anyway!
+        ; if CapsLockToggleState
+        ;  {
+        SetCapsLockState(false)  ; Force Caps Lock OFF and update the light
+        ; }
         DisableCapsLock()  ; Disable the Caps Lock key
         ;ToolTip("Caps Lock is DISABLED - you can now type like a madman!", , , 1)
-		MsgBox("Caps Lock is Disabled - you can now type like a madman!", "Caps Lock Key","T2")
+        MsgBox("Caps Lock is Disabled - you can now type like a madman!", "Caps Lock Key", "T2")
     }
     ;SetTimer(RemoveToolTip, -2000)
 }
@@ -47,5 +47,5 @@ EnableCapsLock()
 
 }
 ;RemoveToolTip() {
-  ;  ToolTip()
+;  ToolTip()
 ;}
