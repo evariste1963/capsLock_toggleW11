@@ -1,5 +1,6 @@
 ; Global variable to track if Caps Lock is disabled
 global capsLockDisabled := false
+; msgbox ("my ahk version: " A_AhkVersion)
 
 ; Hotkey: Ctrl + Shift + C
 ^+c::
