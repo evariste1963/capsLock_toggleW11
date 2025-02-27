@@ -1,6 +1,3 @@
-;#Include <Gui> ; Include the Gui library
-;#Include <GuiCreate.ahk> ; Include the GuiCreate library (ensure this library is available)
-
 global capsLockDisabled := false
 
 ^+c::
