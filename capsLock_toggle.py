@@ -24,6 +24,7 @@ def disable_caps_lock():
     result = subprocess.run(['xmodmap', '-e', 'keycode 66 = Control_L'], capture_output=True, text=True)
     print(f"xmodmap output: {result.stdout}")  # Debug statement
     print(f"xmodmap error: {result.stderr}")  # Debug statement
+    print(f"xmodmap return code: {result.returncode}")  # Debug statement
     caps_lock_disabled = True
 
 def enable_caps_lock():
@@ -32,6 +33,7 @@ def enable_caps_lock():
     result = subprocess.run(['xmodmap', '-e', 'keycode 66 = Caps_Lock'], capture_output=True, text=True)
     print(f"xmodmap output: {result.stdout}")  # Debug statement
     print(f"xmodmap error: {result.stderr}")  # Debug statement
+    print(f"xmodmap return code: {result.returncode}")  # Debug statement
     caps_lock_disabled = False
 
 def show_notification(title, text, color):
