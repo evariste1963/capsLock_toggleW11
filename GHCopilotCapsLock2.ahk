@@ -5,12 +5,12 @@ global capsLockDisabled := false
     if capsLockDisabled
     {
         EnableCapsLock()
-        CapsLockGuiSet("Enabling Caps Lock Key", "   Caps Lock is ENABLED - Careful what you wish for!   ")
+        CapsLockGuiSet("Enabling Caps Lock Key", "   Caps Lock is ENABLED - Careful what you wish for !   ", "red")
     }
     else
     {
         DisableCapsLock()
-        CapsLockGuiSet("Disabling Caps Lock Key", "   Caps Lock is DISABLED - You can now type like a madman!   ")
+        CapsLockGuiSet("Disabling Caps Lock Key", "   Caps Lock is DISABLED - You can now type like a madman !   ", "green")
     }
 }
 
@@ -29,10 +29,10 @@ EnableCapsLock()
     capsLockDisabled := false
 }
 
-CapsLockGuiSet(Title, Text)
+CapsLockGuiSet(Title, Text, colour)
 {
     CapsLockgui := Gui(, Title)
-    CapsLockgui.BackColor := "2e2e2d"
+    CapsLockgui.BackColor := colour
     CapsLockgui.SetFont("s11 cwhite", "Comic Sans MS")
     CapsLockgui.Add("Text", , Text)
     CapsLockgui.Show("AutoSize Center")
