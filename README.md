@@ -1,8 +1,35 @@
-This script allows the toggling off the Caps Lock Key function
+# Caps Lock Toggle Script
 
-features:
-    Ctrl + Shft + c  (^+C) toggles the function
-    If function is ON, then it de-selects the Caps Lock Key (no caps) before toggling the function off (Cap lock key disabled)
-    else, it just toggles it on and off.
+## Prerequisites
 
-    The code was generated (after much prompting and more prompting by DeepSeek - https://chat.deepseek.com/)
+1. Ensure you have Python installed on your system. You can download it from [python.org](https://www.python.org/).
+2. Install the required dependencies using pip:
+
+    ```sh
+    pip install pynput
+    sudo apt-get install xdotool
+    sudo apt-get install libnotify-bin
+    ```
+
+## Running the Script
+
+1. Navigate to the directory containing the script:
+
+    ```sh
+    cd /home/thsme/Coding/capsLock_toggleW11
+    ```
+
+2. Run the script using Python:
+
+    ```sh
+    python3 capsLock_toggle.py
+    ```
+
+3. Press `Ctrl + Shift + /` to toggle the Caps Lock key.
+
+## Notes
+
+- This script is designed for Linux systems.
+- Ensure you have the necessary permissions to run the commands used in the script.
+
+
