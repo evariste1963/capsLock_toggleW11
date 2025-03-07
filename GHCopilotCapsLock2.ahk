@@ -1,4 +1,5 @@
-global capsLockDisabled := false
+global capsLockDisabled := true
+DisableCapsLock() ;set capsLock disabled by default 
 
 ^+c::
 {
