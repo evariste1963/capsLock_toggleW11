@@ -34,7 +34,7 @@ CapsLockGuiSet(Title, Text, colour)
 {
     CapsLockgui := Gui(, Title)
     CapsLockgui.BackColor := colour
-    CapsLockgui.SetFont("s11 cwhite", "Comic Sans MS")
+    CapsLockgui.SetFont("s11 cwhite bold", "ink free")
     CapsLockgui.Add("Text", , Text)
     CapsLockgui.Show("AutoSize Center")
     SetTimer () => CapsLockgui.Destroy(), -2000
